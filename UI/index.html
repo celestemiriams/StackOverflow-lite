@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>StackOverflow-lite</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="mystyle.css">
+        <style> 
+            #qtns{
+                margin-left: 50px;
+                margin-right: 80px;
+            }
+        </style>
+    </head>
+
+    <body>
+             <!--Header-->
+                <div class="header">
+                    <ul>
+                        <li><h1 class="title">StackOverflow-lite</h1></li>
+                        <li><a href="profile.html" class="special">Profile</a></li>
+                        <li><a href="SignIn.html" class="special">Sign Out</a> </li>
+                    </ul>         
+                </div>
+                
+             <!--Navigation bar-->
+                <div class="topnav">
+                        <a href="#" class="active">Questions Asked</a>
+                        <a href="#modal">Post Question</a>
+                        <a href="specialQtns.html">Questions with most answers</a>   
+                    
+                        <form class="search-form">
+                                <input type="text" placeholder="Search for a question" name="search">
+                                <button>Search</button>
+                        </form>
+                    
+                 
+                </div>
+
+                <section>
+
+                        <div class="modal-container" id="modal">
+                            <div class="modal">
+                                <a href="#" class="close">X</a>
+                                <span class="modal-heading">
+                                        Ask Your Question Here
+                                </span>
+                                <form class="modal-form" onsubmit="return validateForm()">
+                                        <input type="text" name="title" placeholder="Title"><br>
+                                        <textarea rows="10" cols="50" placeholder="Type Your Question Here" name="myqtn"></textarea><br>
+                                        <input type="submit" class="btnPostQuestion" value="Post Question">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="qtns">
+                                <h1 id="ttle"></h1>
+                                <p id="Qtn"></p>
+                               
+                                <h1>Question 2</h1>
+                                <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. 
+                                    Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. 
+                                    Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei.</p>
+                                <a href="Answers.html" style="float:right; color: maroon; margin-right: 100px;">View Answers</a>
+                        </div>
+
+                </section>
+        
+                <footer>
+                    <p>All rights reserved</p>
+                </footer>
+
+            <script>
+                    function validateForm() {
+                        var title = document.forms["modal-form"]["title"].value;
+                        var myqtn = document.forms["modal-form"]["myqtn"].value;
+    
+                        if (title == "" || myqtn == "" ) {
+                            alert("All fields must be filled out");
+                            return false;
+                        }
+
+                        document.getElementById("ttle").innerHTML = title;
+                        document.getElementById("Qtn").innerHTML = myqtn;
+                    }
+
+                    
+
+            </script>
+
+        
+    </body>
+
+
+</html>

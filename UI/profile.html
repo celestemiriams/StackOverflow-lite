@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>StackOverflow-lite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="mystyle.css" />
+    <script src="main.js"></script>
+    <style>
+
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 70%;
+                margin-top: 20px;
+                margin-left: 30px;
+                }
+
+            td {
+                border: 1px solid gray;
+                text-align: left;
+                padding: 8px;
+                }
+            th{
+                background-color: rgb(29, 27, 27);
+                text-align: left;
+                padding: 8px;
+                border: 1px solid gray;
+                color: white;
+            }
+
+             .edit{
+                     background-color: maroon;
+                     color:white;
+                     float:right;
+             }
+    </style>
+</head>
+<body>
+        <!--Header-->
+        <div class="header">
+                <ul>
+                        <li><h1 class="title">StackOverflow-lite</h1></li>
+                        <li><a href="profile.html" class="special">Profile</a></li>
+                        <li><a href="SignIn.html" class="special">Sign Out</a> </li>
+                </ul> 
+        </div>
+
+        <!--Navigation bar-->
+
+        <div class="topnav">
+                <a href="index.html" class="active">Questions Asked</a>
+                <a href="#modal">Post Question</a>
+                <a href="specialQtns.html">Questions with most answers</a>   
+                
+                <form class="search-form">
+                        <input type="text" placeholder="Search for a question" name="search">
+                        <button>Search</button>
+                </form>
+                
+                
+        </div>
+
+        <!--User's profile-->
+
+        <section>
+
+                <div id="user-profile">
+                        <table style="width: 70%;">
+                                <tr>
+                                        <th>My Profile</th>
+                                        <th><button class="edit">EDIT</button></th>
+                                </tr>
+                                
+                                <tr>
+                                        <td>User name</td>
+                                        <td></td>
+                                </tr>
+                                <tr>
+                                        <td>Email</td>
+                                        <td></td>
+                                </tr>
+                                <tr>
+                                        <td>Password</td>
+                                        <td></td>
+                                </tr>
+                                <tr>
+                                        <td>Number of questions Asked</td>
+                                        <td></td>
+                                </tr>
+                                <tr>
+                                        <td>Number of Answers Given</td>
+                                        <td></td>
+                                </tr>
+                                <tr>
+                                        <td>Your Questions</td>
+                                        <td><a href="specialQtns.html" class="questions">Questions You have ever asked</a></td>
+                                </tr>
+                                <tr>
+                                        <td>Questions with many Answers</td>
+                                        <td><a href="specialQtns.html" class="questions">Questions asked with many answers</a></td>
+                                </tr>
+                        </table>
+                        
+                                
+                                
+                        
+                </div>
+
+        </section>
+        
+        <footer>
+                <p>All rights reserved</p>
+        </footer>
+        
+</body>
+</html>
