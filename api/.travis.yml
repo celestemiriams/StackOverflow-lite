@@ -8,5 +8,5 @@ script:
 -coverage
 -coverage report
 -coveralls
--after_success;
+-after_success:
 -coveralls
