@@ -1,4 +1,6 @@
-class AppData:
+"""app_data"""
+class AppData(object):
+    """Creates a list storing data"""
     stack_overflow_db = [
         # First question
         {

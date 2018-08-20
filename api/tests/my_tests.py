@@ -2,8 +2,9 @@
 Tests module
 """
 from unittest import TestCase
-from run import App
 from flask import json
+from run import App
+
 
 
 class Tests(TestCase):
@@ -11,8 +12,8 @@ class Tests(TestCase):
     Tests run for the api
     """
     def setUp(self):
-        self.APP = App
-        self.client = self.APP.test_client
+        self.app = App
+        self.client = self.app.test_client
 
     def test_get_questions(self):
         """
@@ -46,7 +47,7 @@ class Tests(TestCase):
         Test case for post a question endpoint, it posts a question
         """
         result = self.client().post('/api/v1/questions/', data=json.dumps(
-            dict(question_id=1, person_who_asked="Miriam", the_question="How to join Andela fellowship",
+            dict(question_id=1, person_who_asked="Miriam", the_question="How to join fellowship",
                  Answers=['no answer'])), content_type='application/json')
         self.assertEqual(result.status_code, 400)
 

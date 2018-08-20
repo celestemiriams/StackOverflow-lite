@@ -1,3 +1,4 @@
+"""end_point contains the different api endpoints """
 from flask import request, jsonify, Response, json
 from flask.views import MethodView
 from models.app_data import AppData
@@ -51,6 +52,7 @@ class QuestionsController(MethodView):
     # Post a question
     @staticmethod
     def handle_post_question():
+        """ This function enables one to post a specific question """
         questions = AppData.stack_overflow_db
         request_data = request.get_json()
         if valid_question(request_data):
@@ -69,7 +71,7 @@ class QuestionsController(MethodView):
             bad_object = {
                 "error": "Invalid Question Format",
                 "help format": "Request format should be {'question_id': '5','title': 'API',"
-                            "'person_who_asked': '7.99','the_question': 'Your Question' }"
+                               "'person_who_asked': '7.99','the_question': 'Your Question' }"
             }
             response = Response(json.dumps(bad_object), status=400, mimetype="application/json")
             return response
@@ -77,6 +79,7 @@ class QuestionsController(MethodView):
     # Adding an answer to a specific question
     @staticmethod
     def handle_answers(question_id):
+        """this function adds an answer to a specific question"""
         questions = AppData.stack_overflow_db
         request_data = request.get_json()
         for question_ in questions:
@@ -89,8 +92,8 @@ class QuestionsController(MethodView):
         return response
 
 # validate a question
-def valid_question(questionObject):
-    if "title" in questionObject and "the_question" in questionObject and "person_who_asked" and "question_id" in questionObject:
+def valid_question(question_object):
+    """check if the user enters a valid question"""
+    if "title" in question_object and "the_question" in question_object and "person_who_asked" and "question_id" in question_object:
         return True
-    else:
-        return False
+    
