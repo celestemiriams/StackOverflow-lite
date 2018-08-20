@@ -4,7 +4,7 @@ python:
 install:
 - pip install -requirements.txt
 script:
--pytest --cov=.
+-pytest #--cov=.
 -coverage
 -coverage report
 -coveralls
