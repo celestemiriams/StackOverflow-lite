@@ -7,8 +7,8 @@ install:
 - pip install -r requirements.txt
 script:
 - pytest --cov=.
-# # - coverage
-# # - coverage report
-# # - coveralls
+- coverage
+- coverage report
+- coveralls
 # after_success:
 # - coveralls
