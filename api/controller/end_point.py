@@ -1,7 +1,7 @@
 """end_point contains the different api endpoints """
 from flask import request, jsonify, Response, json
 from flask.views import MethodView
-from models.app_data import AppData
+from api.models.app_data import AppData
 
 
 class QuestionsController(MethodView):

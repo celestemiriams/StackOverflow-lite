@@ -2,7 +2,7 @@
 Links class , to handle request urls,
 """
 
-from controller.end_point import QuestionsController
+from api.controller.end_point import QuestionsController
 
 
 class Links(object):

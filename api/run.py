@@ -3,9 +3,9 @@ app root of the api endpoints
 """
 
 
-from instances.config import DevelopmentConfig, ProductionConfig
+from api.instances.config import DevelopmentConfig, ProductionConfig
 from flask import Flask
-from app.views import Links
+from api.app.views import Links
 
 
 class Server:
