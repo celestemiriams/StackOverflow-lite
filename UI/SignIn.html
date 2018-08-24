@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>StackOverflow-lite</title>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+        <style>
+           body{
+                background-color: lavender;
+            }
+
+            div.log{
+                position: absolute; 
+                left: 450px;
+                top: 20%;
+                background-color: #f2f2f2;
+                padding: 20px;
+            } 
+
+            input[type=text], input[type=password], input[type=email]{
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            input[type=submit] {
+                width: 100%;
+                background-color:maroon;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                background-color:red;
+            }
+
+            form{
+                margin: 0 auto;
+                
+            }
+
+            a{
+                text-decoration: none;
+                color: maroon;   
+            }
+
+            a:hover{
+                color:red;
+            }
+        </style>
+    </head>
+
+    <body>
+       <div id="wrapper">
+            <div class="log">
+                    <h1 style="color: maroon;">StackOverflow-lite</h1>
+                    <!--Creating a login form-->
+                    <form>
+                        <h3>Login</h3>
+                        <input type="email" name="email" placeholder="Email"><br>
+                        <input type="password" name="password" placeholder="Password"><br>
+                        <input type="submit" value="Signin"><br><br>
+                    </form>
+        
+                    <!--Creating a link to the signup page-->
+                    <a href="SignUp.html">Don't have an Account? Sign Up</a>
+                </div>
+
+       </div>     
+        
+    </body>
+
+
+</html>

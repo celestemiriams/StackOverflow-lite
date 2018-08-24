@@ -1,0 +1,6 @@
+[
+  "my_tests.py::Tests::test_get_a_question",
+  "my_tests.py::Tests::test_get_questions",
+  "my_tests.py::Tests::test_post_a_question",
+  "my_tests.py::Tests::test_post_answers"
+]
