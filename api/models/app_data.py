@@ -8,7 +8,7 @@ class AppData(object):
             'title': 'Restful APIs',
             'person_who_asked': 'Miriam',
             'the_question': 'How do i implement a restful api?',
-            'Answers': ['no answers']
+            'Answers': []
         },
 
         # question 2
@@ -22,12 +22,10 @@ class AppData(object):
 
         # Third question
         {
-            'question_id': 2,
+            'question_id': 3,
             'title': 'Bootcamp',
             'person_who_asked': 'Musa',
             'the_question': 'when will the boot camp end?',
-            'Answers': [
-                'No answer'
-            ]
+            'Answers': []
         }
     ]
