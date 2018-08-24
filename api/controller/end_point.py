@@ -52,7 +52,7 @@ class QuestionsController(MethodView):
     # Post a question
     @staticmethod
     def handle_post_question():
-        """ This function enables one to post a specific question """
+        """ This function enables one to post a question """
         questions = AppData.stack_overflow_db
         request_data = request.get_json()
         if valid_question(request_data):
@@ -87,7 +87,7 @@ class QuestionsController(MethodView):
                 question_['Answers'].append(request_data['Answers'])
             else:
                 continue
-        response = Response("", status="204")
+        response = Response("", status="201")
         response.headers['Location'] = "/api/v1/questions/" + str(question_id) + "/"
         return response
 
